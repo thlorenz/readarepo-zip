@@ -9,7 +9,9 @@
     "url": "git://github.com/thlorenz/readarepo.git"
   },
   "main": "main.js",
-  "dependencies": {},
+  "dependencies": {
+      "asyncjs": ">=0.0.6"
+  },
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
