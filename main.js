@@ -1,10 +1,10 @@
 var exec    =  require('child_process').exec,
-    asyncjs =  require('asyncjs'),
+    file    =  require('file'),
     path    =  require('path'),
     _       =  require('underscore');
 
 
-var dir = './samples/doctoc';
+var sourceRoot = './samples/doctoc';
 var targetRoot = './tmp';
 var ignoredPaths = ['.git', 'node_modules'];
 
@@ -24,7 +24,7 @@ function prepTargetPaths(fi) {
 
 
 var sourceFiles = [],
-    sourcePaths;
+    sourcePaths = [];
 function createTargetPaths() {
 
     function mkdirs(dirs, mode, cb){
@@ -43,9 +43,12 @@ function createTargetPaths() {
     console.log('paths', targetPaths);
 }
 
-asyncjs
-    .walkfiles(dir, isIgnored)
-    .each(function (fi) { sourceFiles.push(fi); })
-    .end(createTargetPaths);
+file.walk(sourceRoot, function (err, dir, subdirs, files) { 
+    sourcePaths.push({
+        path: dir,
+        files: files
+    });
+});
+console.log(sourcePaths);
 
 
