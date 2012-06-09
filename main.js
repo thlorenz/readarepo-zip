@@ -62,6 +62,9 @@ function processRepoContent (err, res) {
     prepareTargetDirectories(function () {
         syntaxHighlightFiles(function() { 
             console.log('files highlighted'); 
+            sh.zip(fullTargetRoot, path.join(fullTargetRoot, 'doctoc.zip'), function() {
+                console.log('zipped', arguments);
+            });
         });
     });
 }
