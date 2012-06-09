@@ -7,8 +7,12 @@ var fs      =  require('fs')
   ;
 
 
-var sourceRoot = './samples/doctoc'
-  , targetRoot = 'tmp/doctoc'
+var repoUrl = 'https://github.com/thlorenz/readarepo.git'
+  , repoName = 'readarepo' // TODO: derive
+  , tmpPath  = './tmp'
+  , sourceRoot = path.join(tmpPath, repoName)
+  , targetRoot = path.join(tmpPath, repoName + '_converted')
+  , fullSourceRoot
   , fullTargetRoot
   ;
 
@@ -62,20 +66,28 @@ function processRepoContent (err, res) {
     prepareTargetDirectories(function () {
         syntaxHighlightFiles(function() { 
             console.log('files highlighted'); 
-            sh.zip(fullTargetRoot, path.join(fullTargetRoot, 'doctoc.zip'), function() {
+            sh.zip(fullTargetRoot, path.join(tmpPath, repoName + '.zip'), function() {
                 console.log('zipped', arguments);
             });
         });
     });
 }
 
-fs.realpath(targetRoot, function(err, realPath) {
-    fullTargetRoot = realPath;
-    fsrec.readdir( { 
-            root: sourceRoot
-        , directoryFilter: ['!.git', '!node_modules'] 
-        }
-        , processRepoContent);
+fs.realpath(sourceRoot, function(err, realPath) {
+    fullSourceRoot = realPath;
+
+    fs.realpath(targetRoot, function(err, realPath) {
+        fullTargetRoot = realPath;
+
+        sh.gitClone(repoUrl, fullSourceRoot, function() {
+            console.log('cloned repo', arguments);
+            fsrec.readdir( { 
+                root: fullSourceRoot
+                , directoryFilter: ['!.git', '!node_modules'] 
+                }
+                , processRepoContent);
+        });
+    });
 });
 
 
