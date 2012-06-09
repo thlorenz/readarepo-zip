@@ -1,54 +1,78 @@
-var exec    =  require('child_process').exec,
-    file    =  require('file'),
-    path    =  require('path'),
-    _       =  require('underscore');
+var fs      =  require('fs')
+  , fsrec   =  require('fsrec')
+  , mkdirp  =  require('mkdirp')
+  , path    =  require('path')
+  , _       =  require('underscore')
+  , sh      =  require('./lib/sh')
+  ;
 
 
-var sourceRoot = './samples/doctoc';
-var targetRoot = './tmp';
-var ignoredPaths = ['.git', 'node_modules'];
+var sourceRoot = './samples/doctoc'
+  , targetRoot = 'tmp/doctoc'
+  , fullTargetRoot
+  ;
 
 
-function isIgnored(fi) {
-    return  !(fi.stat.isDirectory() && _(ignoredPaths).contains(fi.name));
-}
+var sourceFiles = []
+  , sourcePaths = []
+  ;
 
-function pathDoesnExist(fi, cb) { 
-    path.exists(fi, function (exists) { cb(!exists); });
-}
+function processRepoContent (err, res) {
+    if (err) {
+        console.log('warn: ', err);
+    }
 
-function prepTargetPaths(fi) {
+    if (!res) {
+        console.log('no response, nothing I can do!');
+        return;
+    }
 
-     
-}
+    function prepareTargetDirectories(cb) {
+        var pending = res.directories.length;
+        res.directories
+            .forEach(function(di) { 
+                var dir = path.join(fullTargetRoot, di.path);
+                console.log('Creating: ', dir);
+                mkdirp(dir, function(err) {
+                    if (err) {
+                        console.log('Unable to created: ', dir);
+                    }
+                    if (--pending === 0) cb();
+                });
+            });
+    }
 
+    function syntaxHighlightFiles (cb) {
+        var pending = res.files.length;
 
-var sourceFiles = [],
-    sourcePaths = [];
-function createTargetPaths() {
+        res.files.forEach(function(fi) {
 
-    function mkdirs(dirs, mode, cb){
-        (function next(e) {
-            (!e && dirs.length) ? fs.mkdir(dirs.shift(), mode, next) : cb(e);
-        })(null);
-    };
+            var tgt = path.join(fullTargetRoot, fi.path) + '.html';
 
-    targetPaths = _(sourceFiles)
-        .chain()
-        .pluck('path')
-        .map(function (x) { return path.join(targetRoot, path.dirname(x)); })
-        .uniq()
-        .value();
+            sh.pygmentize(fi.fullPath, tgt, function(er) {
+                if (err) {
+                    console.log('error pygmentizing:', fi.fullPath);
+                    console.log(err);
+                } 
+                if (--pending === 0) cb();
+            });
+        });
+    }
 
-    console.log('paths', targetPaths);
-}
-
-file.walk(sourceRoot, function (err, dir, subdirs, files) { 
-    sourcePaths.push({
-        path: dir,
-        files: files
+    prepareTargetDirectories(function () {
+        syntaxHighlightFiles(function() { 
+            console.log('files highlighted'); 
+        });
     });
+}
+
+fs.realpath(targetRoot, function(err, realPath) {
+    fullTargetRoot = realPath;
+    fsrec.readdir( { 
+            root: sourceRoot
+        , directoryFilter: ['!.git', '!node_modules'] 
+        }
+        , processRepoContent);
 });
-console.log(sourcePaths);
 
 
