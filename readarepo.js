@@ -18,69 +18,71 @@ var service = require('./lib/service')
   ;
 
 function init () {
-    return { 
+    this.data = { 
         url             :  argv.url
       , targetPath      :  argv.target
       , directoryFilter :  argv.directories.split(',')
       , fileFilter      :  argv.files ? argv.files.split(',') : undefined 
     };
+    this();
 }
 
-function prepareTargetPath(args, cb) {
-    mkdirp(args.targetPath, function(err) {
+function prepareTargetPath() {
+    var that = this;
+    mkdirp(that.data.targetPath, function(err) {
         if (err) {
-            console.log('Unable to create: ', args.targetPath);
+            console.log('Unable to create: ', targetPath);
         }
-        cb();
+        that();
     });
 }
 
-function clone (args, cb) {
-    console.log('cloning',args.url);
-    service.cloneGitRepository(args.url, { targetPath: args.targetPath }, function(err, res) {
+function clone () {
+    var that = this;
+    service.cloneGitRepository(that.data.url, { targetPath: that.data.targetPath }, function(err, res) {
         if (err) {
-            console.log('Unable to clone: ', args.url);
+            console.log('Unable to clone: ', that.data.url);
             console.log(err);
+            return;
         }
 
-
-        args.repoName = res.repoName;
-        args.clonedRepoPath = res.clonedRepoPath;
-        args.convertedPath = res.clonedRepoPath + '_converted';
-        console.log('cloned');
-        cb();
+        that.data.clonedRepoPath = res.clonedRepoPath;
+        that.data.convertedPath = res.clonedRepoPath + '_converted';
+        that();
     });
 }
 
-function prepareConvertedPath(args, cb) {
-    mkdirp(args.convertedPath, function(err) {
+function prepareConvertedPath() {
+    var that = this;
+    mkdirp(that.data.convertedPath, function(err) {
         if (err) {
-            console.log('Unable to create: ', args.convertedPath);
+            console.log('Unable to create: ', convertedPath);
         }
-        cb();
+        that();
     });
 }
 
-function convert (args, cb) {
+function convert () {
     console.log('converting');
-    service.convertFolder(args.clonedRepoPath 
-                        , { directoryFilter :  args.directoryFilter
-                          , fileFilter      :  args.fileFilter
-                          , targetPath      :  args.convertedPath
+    service.convertFolder(this.data.clonedRepoPath 
+                        , { directoryFilter: this.data.directoryFilter
+                          , fileFilter: this.data.fileFilter
+                          , targetPath: this.data.convertedPath
                           }
-                        , cb);
+                        , this);
 }
-
-// Not using step here because that resulted in logs of swallowed errors
-var args = init();
-prepareTargetPath(args, function() {
-    clone(args, function() {
-        prepareConvertedPath(args, function() {
-            convert(args, function() {
-                sh.zip(args.convertedPath, path.join(args.convertedPath, args.repoName + '.zip'), function() {
-                    console.log ('Everyting is OK.'); 
-                });
-            });
-        });
-    });
-});
+step( init
+    , prepareTargetPath
+    , clone
+    , prepareConvertedPath
+    , convert
+    , function(err) { 
+        if (err) {
+            console.log('Error: ', err);
+        } else {
+            console.log(this.data);
+            console.log ('Everyting is OK.'); 
+        }
+      }
+    )
+    ;
