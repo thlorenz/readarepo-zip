@@ -5,7 +5,7 @@ var service = require('./lib/service')
   , step = require('step')
   , argv = require('optimist')
         .default('t', './tmp')
-        .default('d', '!.git,!node_modules')
+        .default('d', '!.git, !node_modules')
         .default('f', undefined)
         .demand('u')
         .alias('t', 'target')
@@ -42,6 +42,7 @@ function clone () {
         if (err) {
             console.log('Unable to clone: ', that.data.url);
             console.log(err);
+            return;
         }
 
         that.data.clonedRepoPath = res.clonedRepoPath;
@@ -77,9 +78,13 @@ step( init
     , clone
     , prepareConvertedPath
     , convert
-    , function() { 
-        console.log(this.data);
-        console.log ('Everyting is OK.'); 
+    , function(err) { 
+        if (err) {
+            console.log('Error: ', err);
+        } else {
+            console.log(this.data);
+            console.log ('Everyting is OK.'); 
+        }
       }
     )
     ;
