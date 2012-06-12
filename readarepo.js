@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var service = require('./lib/service')
+  , sh = require('./lib/sh')
   , fs   = require('fs')
+  , path = require('path')
   , mkdirp  =  require('mkdirp')
   , step = require('step')
   , argv = require('optimist')
@@ -41,6 +43,8 @@ function clone (args, cb) {
             console.log(err);
         }
 
+
+        args.repoName = res.repoName;
         args.clonedRepoPath = res.clonedRepoPath;
         args.convertedPath = res.clonedRepoPath + '_converted';
         console.log('cloned');
@@ -67,39 +71,16 @@ function convert (args, cb) {
                         , cb);
 }
 
+// Not using step here because that resulted in logs of swallowed errors
 var args = init();
 prepareTargetPath(args, function() {
     clone(args, function() {
         prepareConvertedPath(args, function() {
             convert(args, function() {
-                console.log(this.data);
-                console.log ('Everyting is OK.'); 
+                sh.zip(args.convertedPath, path.join(args.convertedPath, args.repoName + '.zip'), function() {
+                    console.log ('Everyting is OK.'); 
+                });
             });
         });
     });
 });
-
-/*
-step( init
-    , prepareTargetPath
-    , clone
-    , prepareConvertedPath
-    , convert
-    , function() { 
-        console.log(this.data);
-        console.log ('Everyting is OK.'); 
-      }
-    )
-    ;
-cloneGitRepository('git://github.com/thlorenz/doctoc.git', null, function(err, res) {
-    var convertedPath = res.clonedRepoPath + '_converted';
-    fs.mkdirSync(convertedPath);
-    var opts = { 
-        directoryFilter: [ '!.git', '!node_modules' ]
-      , targetPath: convertedPath
-    };
-    convertFolder(res.clonedRepoPath, opts, function() {
-        console.log('done');
-    });
-});
-*/
