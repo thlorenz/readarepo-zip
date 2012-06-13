@@ -1,19 +1,19 @@
 #!/usr/bin/env node
-var service = require('./lib/service')
-  , sh = require('./lib/sh')
-  , fs   = require('fs')
-  , path = require('path')
+var service =  require('./lib/service')
+  , sh      =  require('./lib/sh')
+  , fs      =  require('fs')
+  , path    =  require('path')
   , mkdirp  =  require('mkdirp')
-  , step = require('step')
-  , argv = require('optimist')
-        .default('t', './tmp')
-        .default('d', '!.git,!node_modules')
-        .default('f', undefined)
-        .demand('u')
-        .alias('t', 'target')
-        .alias('u', 'url')
-        .alias('d', 'directories')
-        .alias('f', 'files')
+  , step    =  require('step')
+  , argv    =  require('optimist')
+        .demand  ( 'u')
+        .default ( 't', './tmp')
+        .default ( 'd', '!.git,!node_modules')
+        .default ( 'f', undefined)
+        .alias   ( 't', 'target')
+        .alias   ( 'u', 'url')
+        .alias   ( 'd', 'directories')
+        .alias   ( 'f', 'files')
         .argv
   ;
 
@@ -32,6 +32,7 @@ function prepareTargetPath() {
     mkdirp(that.data.targetPath, function(err) {
         if (err) {
             console.log('Unable to create: ', targetPath);
+            return;
         }
         that();
     });
@@ -46,6 +47,7 @@ function clone () {
             return;
         }
 
+        that.data.repoName = res.repoName;
         that.data.clonedRepoPath = res.clonedRepoPath;
         that.data.convertedPath = res.clonedRepoPath + '_converted';
         that();
@@ -57,25 +59,38 @@ function prepareConvertedPath() {
     mkdirp(that.data.convertedPath, function(err) {
         if (err) {
             console.log('Unable to create: ', convertedPath);
+            return;
         }
         that();
     });
 }
 
 function convert () {
-    console.log('converting');
-    service.convertFolder(this.data.clonedRepoPath 
-                        , { directoryFilter: this.data.directoryFilter
-                          , fileFilter: this.data.fileFilter
-                          , targetPath: this.data.convertedPath
-                          }
-                        , this);
+    var that = this;
+    service.convertFolder(
+        that.data.clonedRepoPath 
+      , { directoryFilter: that.data.directoryFilter
+          , fileFilter: that.data.fileFilter
+          , targetPath: that.data.convertedPath
+        }
+      , function(err) {
+            if (err) console.log('Error: ', err);
+            that();
+        }
+    );
 }
+
+function zipIt () {
+    var tgt = path.join(this.data.convertedPath, '..', this.data.repoName + '.zip');
+    sh.zip(this.data.convertedPath, tgt, this);
+}
+
 step( init
     , prepareTargetPath
     , clone
     , prepareConvertedPath
     , convert
+    , zipIt
     , function(err) { 
         if (err) {
             console.log('Error: ', err);
