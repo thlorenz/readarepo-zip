@@ -10,10 +10,12 @@ var service =  require('./lib/service')
         .default ( 't', './tmp')
         .default ( 'd', '!.git,!node_modules')
         .default ( 'f', undefined)
+        .default ( 'h', 'pygment')
         .alias   ( 't', 'target')
         .alias   ( 'u', 'url')
         .alias   ( 'd', 'directories')
         .alias   ( 'f', 'files')
+        .alias   ( 'h', 'highlighter')
         .argv
   ;
 
@@ -23,6 +25,7 @@ function init () {
       , targetPath      :  argv.target
       , directoryFilter :  argv.directories.split(',')
       , fileFilter      :  argv.files ? argv.files.split(',') : undefined 
+      , highlighter     :  argv.highlighter
     };
     this();
 }
@@ -69,9 +72,10 @@ function convert () {
     var that = this;
     service.convertFolder(
         that.data.clonedRepoPath 
-      , { directoryFilter: that.data.directoryFilter
-          , fileFilter: that.data.fileFilter
-          , targetPath: that.data.convertedPath
+      , {   directoryFilter :  that.data.directoryFilter
+          , fileFilter      :  that.data.fileFilter
+          , targetPath      :  that.data.convertedPath
+          , highlighter     :  that.data.highlighter
         }
       , function(err) {
             if (err) console.log('Error: ', err);
