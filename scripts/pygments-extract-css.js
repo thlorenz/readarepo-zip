@@ -2,11 +2,8 @@ var child_process   =  require('child_process')
   , spawn           =  child_process.spawn
   , path            =  require('path')
   , fsrec           =  require('fsrec')
-  , root            =  path.join(__dirname, '..')
-  , pygmentsPath    =  path.join(root, '3rd', 'pygments')
-  , pygmentize      =  path.join(pygmentsPath, 'pygmentize')
-  , stylesPath      =  path.join(pygmentsPath, 'pygments', 'styles')
-  , pygmentsCssPath =  path.join(root, 'highlight', 'styles', 'pygments')
+  , paths           =  require('../lib/common').paths
+  , pygmentize      =  path.join(paths.pygments, 'pygmentize')
   ;
 
 function getStyles (folder, cb) {
@@ -32,7 +29,7 @@ function getStyles (folder, cb) {
        });
 }
 
-getStyles(stylesPath, function (styles) {
+getStyles(paths.pygmentsStylesSource, function (styles) {
 
     var pending = styles.length
       , opts = 'encoding=utf-8,full=true,noclobber_cssfile'
@@ -40,7 +37,7 @@ getStyles(stylesPath, function (styles) {
 
 
     styles.forEach(function (style) {
-        var cssFilePath = path.join(pygmentsCssPath, style + '.css') 
+        var cssFilePath = path.join(paths.pygmentsStyles, style + '.css') 
           , fullOpts = opts + 
               ',style='     + style +
               ',cssfile='   + cssFilePath
