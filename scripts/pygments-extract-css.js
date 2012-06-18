@@ -2,39 +2,16 @@ var child_process   =  require('child_process')
   , spawn           =  child_process.spawn
   , path            =  require('path')
   , fsrec           =  require('fsrec')
+  , pygments        =  require('../lib/pygments')
   , paths           =  require('../lib/common').paths
   , pygmentize      =  path.join(paths.pygments, 'pygmentize')
   ;
 
-function getStyles (folder, cb) {
-   fsrec.readdir({ 
-        root: folder
-      , fileFilter: function(fi) { 
-                return path.extname(fi.name) === '.py' && fi.name.indexOf('__') === -1;
-            } 
-        }
-      , function (err, res) {
-            if (err) {
-                console.error('Error: ', err);
-                cb([]);
-                return;
-            }
-
-            cb(
-                res.files.map(function(fi) { 
-                    var extlength = path.extname(fi.name).length;
-                    return fi.name.substr(0, fi.name.length - extlength);
-                })
-            );
-       });
-}
-
-getStyles(paths.pygmentsStylesSource, function (styles) {
+pygments.getStyles(paths.pygmentsStylesSource, '.py', function (styles) {
 
     var pending = styles.length
       , opts = 'encoding=utf-8,full=true,noclobber_cssfile'
       ;
-
 
     styles.forEach(function (style) {
         var cssFilePath = path.join(paths.pygmentsStyles, style + '.css') 
