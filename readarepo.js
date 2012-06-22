@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 var service =  require('./lib/service')
-  , sh     =  require('./lib/sh')
-  , fs     =  require('fs')
-  , path   =  require('path')
-  , mkdirp =  require('mkdirp')
-  , step   =  require('step')
-  , argv   =  require('optimist')
+  , sh      =  require('./lib/sh')
+  , fs      =  require('fs')
+  , path    =  require('path')
+  , mkdirp  =  require('mkdirp')
+  , step    =  require('step')
+  , argv    =  require('optimist')
     .demand  ( 'u')
     .default ( 't', './tmp')
     .default ( 'd', '!.git,!node_modules')
@@ -71,16 +71,16 @@ function prepareConvertedPath() {
 function convert () {
   var that = this;
   service.convertFolder(
-    that.data.clonedRepoPath 
-    , {   directoryFilter :  that.data.directoryFilter
-      , fileFilter    :  that.data.fileFilter
-      , targetPath    :  that.data.convertedPath
-      , highlighter   :  that.data.highlighter
-    }
+      that.data.clonedRepoPath 
+    , { directoryFilter :  that.data.directoryFilter
+        , fileFilter    :  that.data.fileFilter
+        , targetPath    :  that.data.convertedPath
+        , highlighter   :  that.data.highlighter
+      }
     , function(err) {
-      if (err) console.log('Error: ', err);
-      that();
-    }
+        if (err) console.log('Error: ', err);
+        that();
+      }
   );
 }
 
@@ -89,19 +89,19 @@ function zipIt () {
   sh.zip(this.data.convertedPath, tgt, this);
 }
 
-step( init
+step( 
+    init
   , prepareTargetPath
   , clone
   , prepareConvertedPath
   , convert
   , zipIt
   , function(err) { 
-    if (err) {
-      console.log('Error: ', err);
-    } else {
-      console.log(this.data);
-      console.log ('Everyting is OK.'); 
+      if (err) {
+        console.log('Error: ', err);
+      } else {
+        console.log(this.data);
+        console.log ('Everyting is OK.'); 
+      }
     }
-    }
-  )
-  ;
+  );
