@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 var service =  require('./lib/service')
+  , log     =  require('npmlog')
   , argv    =  require('optimist')
     .demand  ( 'u')
     .default ( 't', './tmp')
@@ -18,4 +19,10 @@ var service =  require('./lib/service')
 
 service.configure( { loglevel:  argv.loglevel } );
 
-service.cloneAndConvert(argv);
+service.cloneAndConvert(argv, function(err) { 
+  if (err) {
+    log.error(err);
+  } else {
+    log.info ('Everyting is OK.'); 
+  }
+});
