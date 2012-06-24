@@ -2,13 +2,27 @@
   "author"      :  "Thorsten Lorenz <thlorenz@gmx.de> (thorstenlorenz.wordpress.com)",
   "name"        :  "readarepo",
   "description" :  "Convert a git repo to zipped up html to read anywhere.",
-  "version"     :  "0.0.0",
+  "version"     :  "0.0.1",
   "homepage"    :  "https://github.com/thlorenz/readarepo",
   "repository"  :  {
     "type" :  "git",
     "url"  :  "git://github.com/thlorenz/readarepo.git"
   },
-  "main": "main.js",
+  "keywords": [
+    "github",
+    "code",
+    "source",
+    "offline",
+    "reading",
+    "mobile",
+    "cli",
+    "command line"
+  ],
+  "licenses" : [{
+      "type" : "MIT",
+      "url" : "http://www.opensource.org/licenses/mit-license.php"
+  }], 
+  "main": "readarepo.js",
   "dependencies": {
       "fsrec"        :  "0.0.x"
     , "mkdirp"       :  "0.3.x"
