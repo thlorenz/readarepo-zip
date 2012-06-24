@@ -1,0 +1,1177 @@
+{
+	"JavaScript+Mako":{ 
+		"shortnames": ["js+mako", "javascript+mako"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+mako", "text/x-javascript+mako", "text/javascript+mako"]
+	},
+	"Elixir iex session":{ 
+		"shortnames": ["iex"],
+		"extensions": [],
+		 "mimetypes": ["text/x-elixir-shellsession"]
+	},
+	"Brainfuck":{ 
+		"shortnames": ["brainfuck", "bf"],
+		"extensions": ["*.bf", "*.b"],
+		 "mimetypes": ["application/x-brainfuck"]
+	},
+	"HTML+Cheetah":{ 
+		"shortnames": ["html+cheetah", "html+spitfire"],
+		"extensions": [],
+		 "mimetypes": ["text/html+cheetah", "text/html+spitfire"]
+	},
+	"Nimrod":{ 
+		"shortnames": ["nimrod", "nim"],
+		"extensions": ["*.nim", "*.nimrod"],
+		 "mimetypes": ["text/x-nimrod"]
+	},
+	"Bash":{ 
+		"shortnames": ["bash", "sh", "ksh"],
+		"extensions": ["*.sh", "*.ksh", "*.bash", "*.ebuild", "*.eclass", ".bashrc", "bashrc", ".bash_*", "bash_*"],
+		 "mimetypes": ["application/x-sh", "application/x-shellscript"]
+	},
+	"CSS+Myghty":{ 
+		"shortnames": ["css+myghty"],
+		"extensions": [],
+		 "mimetypes": ["text/css+myghty"]
+	},
+	"Coldfusion HTML":{ 
+		"shortnames": ["cfm"],
+		"extensions": ["*.cfm", "*.cfml", "*.cfc"],
+		 "mimetypes": ["application/x-coldfusion"]
+	},
+	"Smarty":{ 
+		"shortnames": ["smarty"],
+		"extensions": ["*.tpl"],
+		 "mimetypes": ["application/x-smarty"]
+	},
+	"PowerShell":{ 
+		"shortnames": ["powershell", "posh", "ps1"],
+		"extensions": ["*.ps1"],
+		 "mimetypes": ["text/x-powershell"]
+	},
+	"Tea":{ 
+		"shortnames": ["tea"],
+		"extensions": ["*.tea"],
+		 "mimetypes": ["text/x-tea"]
+	},
+	"ApacheConf":{ 
+		"shortnames": ["apacheconf", "aconf", "apache"],
+		"extensions": [".htaccess", "apache.conf", "apache2.conf"],
+		 "mimetypes": ["text/x-apacheconf"]
+	},
+	"Java":{ 
+		"shortnames": ["java"],
+		"extensions": ["*.java"],
+		 "mimetypes": ["text/x-java"]
+	},
+	"JavaScript+Genshi Text":{ 
+		"shortnames": ["js+genshitext", "js+genshi", "javascript+genshitext", "javascript+genshi"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+genshi", "text/x-javascript+genshi", "text/javascript+genshi"]
+	},
+	"Scheme":{ 
+		"shortnames": ["scheme", "scm"],
+		"extensions": ["*.scm", "*.ss", "*.rkt"],
+		 "mimetypes": ["text/x-scheme", "application/x-scheme"]
+	},
+	"Nemerle":{ 
+		"shortnames": ["nemerle"],
+		"extensions": ["*.n"],
+		 "mimetypes": ["text/x-nemerle"]
+	},
+	"Octave":{ 
+		"shortnames": ["octave"],
+		"extensions": ["*.m"],
+		 "mimetypes": ["text/octave"]
+	},
+	"CoffeeScript":{ 
+		"shortnames": ["coffee-script", "coffeescript"],
+		"extensions": ["*.coffee"],
+		 "mimetypes": ["text/coffeescript"]
+	},
+	"ANTLR With ActionScript Target":{ 
+		"shortnames": ["antlr-as", "antlr-actionscript"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"d-objdump":{ 
+		"shortnames": ["d-objdump"],
+		"extensions": ["*.d-objdump"],
+		 "mimetypes": ["text/x-d-objdump"]
+	},
+	"CSS+Ruby":{ 
+		"shortnames": ["css+erb", "css+ruby"],
+		"extensions": [],
+		 "mimetypes": ["text/css+ruby"]
+	},
+	"MySQL":{ 
+		"shortnames": ["mysql"],
+		"extensions": [],
+		 "mimetypes": ["text/x-mysql"]
+	},
+	"C++":{ 
+		"shortnames": ["cpp", "c++"],
+		"extensions": ["*.cpp", "*.hpp", "*.c++", "*.h++", "*.cc", "*.hh", "*.cxx", "*.hxx"],
+		 "mimetypes": ["text/x-c++hdr", "text/x-c++src"]
+	},
+	"XML+Smarty":{ 
+		"shortnames": ["xml+smarty"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+smarty"]
+	},
+	"Groovy":{ 
+		"shortnames": ["groovy"],
+		"extensions": ["*.groovy"],
+		 "mimetypes": ["text/x-groovy"]
+	},
+	"autohotkey":{ 
+		"shortnames": ["ahk"],
+		"extensions": ["*.ahk", "*.ahkl"],
+		 "mimetypes": ["text/x-autohotkey"]
+	},
+	"Felix":{ 
+		"shortnames": ["felix", "flx"],
+		"extensions": ["*.flx", "*.flxh"],
+		 "mimetypes": ["text/x-felix"]
+	},
+	"CMake":{ 
+		"shortnames": ["cmake"],
+		"extensions": ["*.cmake", "CMakeLists.txt"],
+		 "mimetypes": ["text/x-cmake"]
+	},
+	"Mako":{ 
+		"shortnames": ["mako"],
+		"extensions": ["*.mao"],
+		 "mimetypes": ["application/x-mako"]
+	},
+	"HTTP":{ 
+		"shortnames": ["http"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Python":{ 
+		"shortnames": ["python", "py"],
+		"extensions": ["*.py", "*.pyw", "*.sc", "SConstruct", "SConscript", "*.tac"],
+		 "mimetypes": ["text/x-python", "application/x-python"]
+	},
+	"JavaScript+Myghty":{ 
+		"shortnames": ["js+myghty", "javascript+myghty"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+myghty", "text/x-javascript+myghty", "text/javascript+mygthy"]
+	},
+	"XML+Mako":{ 
+		"shortnames": ["xml+mako"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+mako"]
+	},
+	"Scaml":{ 
+		"shortnames": ["scaml", "SCAML"],
+		"extensions": ["*.scaml"],
+		 "mimetypes": ["text/x-scaml"]
+	},
+	"MAQL":{ 
+		"shortnames": ["maql"],
+		"extensions": ["*.maql"],
+		 "mimetypes": ["text/x-gooddata-maql", "application/x-gooddata-maql"]
+	},
+	"Boo":{ 
+		"shortnames": ["boo"],
+		"extensions": ["*.boo"],
+		 "mimetypes": ["text/x-boo"]
+	},
+	"Logtalk":{ 
+		"shortnames": ["logtalk"],
+		"extensions": ["*.lgt"],
+		 "mimetypes": ["text/x-logtalk"]
+	},
+	"VB.net":{ 
+		"shortnames": ["vb.net", "vbnet"],
+		"extensions": ["*.vb", "*.bas"],
+		 "mimetypes": ["text/x-vbnet", "text/x-vba"]
+	},
+	"SquidConf":{ 
+		"shortnames": ["squidconf", "squid.conf", "squid"],
+		"extensions": ["squid.conf"],
+		 "mimetypes": ["text/x-squidconf"]
+	},
+	"D":{ 
+		"shortnames": ["d"],
+		"extensions": ["*.d", "*.di"],
+		 "mimetypes": ["text/x-dsrc"]
+	},
+	"ActionScript":{ 
+		"shortnames": ["as", "actionscript"],
+		"extensions": ["*.as"],
+		 "mimetypes": ["application/x-actionscript3", "text/x-actionscript3", "text/actionscript3"]
+	},
+	"SCSS":{ 
+		"shortnames": ["scss"],
+		"extensions": ["*.scss"],
+		 "mimetypes": ["text/x-scss"]
+	},
+	"BBCode":{ 
+		"shortnames": ["bbcode"],
+		"extensions": [],
+		 "mimetypes": ["text/x-bbcode"]
+	},
+	"Haml":{ 
+		"shortnames": ["haml", "HAML"],
+		"extensions": ["*.haml"],
+		 "mimetypes": ["text/x-haml"]
+	},
+	"MuPAD":{ 
+		"shortnames": ["mupad"],
+		"extensions": ["*.mu"],
+		 "mimetypes": []
+	},
+	"XML+Ruby":{ 
+		"shortnames": ["xml+erb", "xml+ruby"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+ruby"]
+	},
+	"Debian Control file":{ 
+		"shortnames": ["control"],
+		"extensions": ["control"],
+		 "mimetypes": []
+	},
+	"Jade":{ 
+		"shortnames": ["jade", "JADE"],
+		"extensions": ["*.jade"],
+		 "mimetypes": ["text/x-jade"]
+	},
+	"c-objdump":{ 
+		"shortnames": ["c-objdump"],
+		"extensions": ["*.c-objdump"],
+		 "mimetypes": ["text/x-c-objdump"]
+	},
+	"XML+Velocity":{ 
+		"shortnames": ["xml+velocity"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+velocity"]
+	},
+	"JavaScript+Cheetah":{ 
+		"shortnames": ["js+cheetah", "javascript+cheetah", "js+spitfire", "javascript+spitfire"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+cheetah", "text/x-javascript+cheetah", "text/javascript+cheetah", "application/x-javascript+spitfire", "text/x-javascript+spitfire", "text/javascript+spitfire"]
+	},
+	"Python Traceback":{ 
+		"shortnames": ["pytb"],
+		"extensions": ["*.pytb"],
+		 "mimetypes": ["text/x-python-traceback"]
+	},
+	"Protocol Buffer":{ 
+		"shortnames": ["protobuf"],
+		"extensions": ["*.proto"],
+		 "mimetypes": []
+	},
+	"cfstatement":{ 
+		"shortnames": ["cfs"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Ada":{ 
+		"shortnames": ["ada", "ada95ada2005"],
+		"extensions": ["*.adb", "*.ads", "*.ada"],
+		 "mimetypes": ["text/x-ada"]
+	},
+	"objdump":{ 
+		"shortnames": ["objdump"],
+		"extensions": ["*.objdump"],
+		 "mimetypes": ["text/x-objdump"]
+	},
+	"CSS+Mako":{ 
+		"shortnames": ["css+mako"],
+		"extensions": [],
+		 "mimetypes": ["text/css+mako"]
+	},
+	"Gherkin":{ 
+		"shortnames": ["Cucumber", "cucumber", "Gherkin", "gherkin"],
+		"extensions": ["*.feature"],
+		 "mimetypes": ["text/x-gherkin"]
+	},
+	"Makefile":{ 
+		"shortnames": ["make", "makefile", "mf", "bsdmake"],
+		"extensions": ["*.mak", "Makefile", "makefile", "Makefile.*", "GNUmakefile"],
+		 "mimetypes": ["text/x-makefile"]
+	},
+	"Io":{ 
+		"shortnames": ["io"],
+		"extensions": ["*.io"],
+		 "mimetypes": ["text/x-iosrc"]
+	},
+	"UrbiScript":{ 
+		"shortnames": ["urbiscript"],
+		"extensions": ["*.u"],
+		 "mimetypes": ["application/x-urbiscript"]
+	},
+	"PL/pgSQL":{ 
+		"shortnames": ["plpgsql"],
+		"extensions": [],
+		 "mimetypes": ["text/x-plpgsql"]
+	},
+	"Vala":{ 
+		"shortnames": ["vala", "vapi"],
+		"extensions": ["*.vala", "*.vapi"],
+		 "mimetypes": ["text/x-vala"]
+	},
+	"Haskell":{ 
+		"shortnames": ["haskell", "hs"],
+		"extensions": ["*.hs"],
+		 "mimetypes": ["text/x-haskell"]
+	},
+	"Bro":{ 
+		"shortnames": ["bro"],
+		"extensions": ["*.bro"],
+		 "mimetypes": []
+	},
+	"Lua":{ 
+		"shortnames": ["lua"],
+		"extensions": ["*.lua", "*.wlua"],
+		 "mimetypes": ["text/x-lua", "application/x-lua"]
+	},
+	"Sass":{ 
+		"shortnames": ["sass", "SASS"],
+		"extensions": ["*.sass"],
+		 "mimetypes": ["text/x-sass"]
+	},
+	"ANTLR With ObjectiveC Target":{ 
+		"shortnames": ["antlr-objc"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"XML":{ 
+		"shortnames": ["xml"],
+		"extensions": ["*.xml", "*.xsl", "*.rss", "*.xslt", "*.xsd", "*.wsdl"],
+		 "mimetypes": ["text/xml", "application/xml", "image/svg+xml", "application/rss+xml", "application/atom+xml"]
+	},
+	"Groff":{ 
+		"shortnames": ["groff", "nroff", "man"],
+		"extensions": ["*.[1234567]", "*.man"],
+		 "mimetypes": ["application/x-troff", "text/troff"]
+	},
+	"GLSL":{ 
+		"shortnames": ["glsl"],
+		"extensions": ["*.vert", "*.frag", "*.geo"],
+		 "mimetypes": ["text/x-glslsrc"]
+	},
+	"Genshi Text":{ 
+		"shortnames": ["genshitext"],
+		"extensions": [],
+		 "mimetypes": ["application/x-genshi-text", "text/x-genshi"]
+	},
+	"Objective-J":{ 
+		"shortnames": ["objective-j", "objectivej", "obj-j", "objj"],
+		"extensions": ["*.j"],
+		 "mimetypes": ["text/x-objective-j"]
+	},
+	"GAS":{ 
+		"shortnames": ["gas"],
+		"extensions": ["*.s", "*.S"],
+		 "mimetypes": ["text/x-gas"]
+	},
+	"Python console session":{ 
+		"shortnames": ["pycon"],
+		"extensions": [],
+		 "mimetypes": ["text/x-python-doctest"]
+	},
+	"MXML":{ 
+		"shortnames": ["mxml"],
+		"extensions": ["*.mxml"],
+		 "mimetypes": []
+	},
+	"XML+Cheetah":{ 
+		"shortnames": ["xml+cheetah", "xml+spitfire"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+cheetah", "application/xml+spitfire"]
+	},
+	"Go":{ 
+		"shortnames": ["go"],
+		"extensions": ["*.go"],
+		 "mimetypes": ["text/x-gosrc"]
+	},
+	"Ragel in C Host":{ 
+		"shortnames": ["ragel-c"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"Dart":{ 
+		"shortnames": ["dart"],
+		"extensions": ["*.dart"],
+		 "mimetypes": ["text/x-dart"]
+	},
+	"aspx-cs":{ 
+		"shortnames": ["aspx-cs"],
+		"extensions": ["*.aspx", "*.asax", "*.ascx", "*.ashx", "*.asmx", "*.axd"],
+		 "mimetypes": []
+	},
+	"Properties":{ 
+		"shortnames": ["properties"],
+		"extensions": ["*.properties"],
+		 "mimetypes": ["text/x-java-properties"]
+	},
+	"Ragel in Ruby Host":{ 
+		"shortnames": ["ragel-ruby", "ragel-rb"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"BlitzMax":{ 
+		"shortnames": ["blitzmax", "bmax"],
+		"extensions": ["*.bmx"],
+		 "mimetypes": ["text/x-bmx"]
+	},
+	"HTML+Genshi":{ 
+		"shortnames": ["html+genshi", "html+kid"],
+		"extensions": [],
+		 "mimetypes": ["text/html+genshi"]
+	},
+	"Perl":{ 
+		"shortnames": ["perl", "pl"],
+		"extensions": ["*.pl", "*.pm"],
+		 "mimetypes": ["text/x-perl", "application/x-perl"]
+	},
+	"Scala":{ 
+		"shortnames": ["scala"],
+		"extensions": ["*.scala"],
+		 "mimetypes": ["text/x-scala"]
+	},
+	"INI":{ 
+		"shortnames": ["ini", "cfg"],
+		"extensions": ["*.ini", "*.cfg"],
+		 "mimetypes": ["text/x-ini"]
+	},
+	"RHTML":{ 
+		"shortnames": ["rhtml", "html+erb", "html+ruby"],
+		"extensions": ["*.rhtml"],
+		 "mimetypes": ["text/html+ruby"]
+	},
+	"Coq":{ 
+		"shortnames": ["coq"],
+		"extensions": ["*.v"],
+		 "mimetypes": ["text/x-coq"]
+	},
+	"Tcsh":{ 
+		"shortnames": ["tcsh", "csh"],
+		"extensions": ["*.tcsh", "*.csh"],
+		 "mimetypes": ["application/x-csh"]
+	},
+	"RConsole":{ 
+		"shortnames": ["rconsole", "rout"],
+		"extensions": ["*.Rout"],
+		 "mimetypes": []
+	},
+	"CSS+Smarty":{ 
+		"shortnames": ["css+smarty"],
+		"extensions": [],
+		 "mimetypes": ["text/css+smarty"]
+	},
+	"Text only":{ 
+		"shortnames": ["text"],
+		"extensions": ["*.txt"],
+		 "mimetypes": ["text/plain"]
+	},
+	"ANTLR With C# Target":{ 
+		"shortnames": ["antlr-csharp", "antlr-c#"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"OpenEdge ABL":{ 
+		"shortnames": ["openedge", "abl", "progress"],
+		"extensions": ["*.p", "*.cls"],
+		 "mimetypes": ["text/x-openedge", "application/x-openedge"]
+	},
+	"Darcs Patch":{ 
+		"shortnames": ["dpatch"],
+		"extensions": ["*.dpatch", "*.darcspatch"],
+		 "mimetypes": []
+	},
+	"LLVM":{ 
+		"shortnames": ["llvm"],
+		"extensions": ["*.ll"],
+		 "mimetypes": ["text/x-llvm"]
+	},
+	"Nginx configuration file":{ 
+		"shortnames": ["nginx"],
+		"extensions": [],
+		 "mimetypes": ["text/x-nginx-conf"]
+	},
+	"AppleScript":{ 
+		"shortnames": ["applescript"],
+		"extensions": ["*.applescript"],
+		 "mimetypes": []
+	},
+	"HTML+Smarty":{ 
+		"shortnames": ["html+smarty"],
+		"extensions": [],
+		 "mimetypes": ["text/html+smarty"]
+	},
+	"Literate Haskell":{ 
+		"shortnames": ["lhs", "literate-haskell"],
+		"extensions": ["*.lhs"],
+		 "mimetypes": ["text/x-literate-haskell"]
+	},
+	"PHP":{ 
+		"shortnames": ["php", "php3", "php4", "php5"],
+		"extensions": ["*.php", "*.php[345]"],
+		 "mimetypes": ["text/x-php"]
+	},
+	"MiniD":{ 
+		"shortnames": ["minid"],
+		"extensions": ["*.md"],
+		 "mimetypes": ["text/x-minidsrc"]
+	},
+	"Ooc":{ 
+		"shortnames": ["ooc"],
+		"extensions": ["*.ooc"],
+		 "mimetypes": ["text/x-ooc"]
+	},
+	"SQL":{ 
+		"shortnames": ["sql"],
+		"extensions": ["*.sql"],
+		 "mimetypes": ["text/x-sql"]
+	},
+	"NASM":{ 
+		"shortnames": ["nasm"],
+		"extensions": ["*.asm", "*.ASM"],
+		 "mimetypes": ["text/x-nasm"]
+	},
+	"Debian Sourcelist":{ 
+		"shortnames": ["sourceslist", "sources.list"],
+		"extensions": ["sources.list"],
+		 "mimetypes": []
+	},
+	"Delphi":{ 
+		"shortnames": ["delphi", "pas", "pascal", "objectpascal"],
+		"extensions": ["*.pas"],
+		 "mimetypes": ["text/x-pascal"]
+	},
+	"aspx-vb":{ 
+		"shortnames": ["aspx-vb"],
+		"extensions": ["*.aspx", "*.asax", "*.ascx", "*.ashx", "*.asmx", "*.axd"],
+		 "mimetypes": []
+	},
+	"HTML+Evoque":{ 
+		"shortnames": ["html+evoque"],
+		"extensions": ["*.html"],
+		 "mimetypes": ["text/html+evoque"]
+	},
+	"NumPy":{ 
+		"shortnames": ["numpy"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Modula-2":{ 
+		"shortnames": ["modula2", "m2"],
+		"extensions": ["*.def", "*.mod"],
+		 "mimetypes": ["text/x-modula2"]
+	},
+	"PostgreSQL SQL dialect":{ 
+		"shortnames": ["postgresql", "postgres"],
+		"extensions": [],
+		 "mimetypes": ["text/x-postgresql"]
+	},
+	"HTML+Django/Jinja":{ 
+		"shortnames": ["html+django", "html+jinja"],
+		"extensions": [],
+		 "mimetypes": ["text/html+django", "text/html+jinja"]
+	},
+	"CSS+PHP":{ 
+		"shortnames": ["css+php"],
+		"extensions": [],
+		 "mimetypes": ["text/css+php"]
+	},
+	"VimL":{ 
+		"shortnames": ["vim"],
+		"extensions": ["*.vim", ".vimrc", ".exrc", ".gvimrc", "_vimrc", "_exrc", "_gvimrc", "vimrc", "gvimrc"],
+		 "mimetypes": ["text/x-vim"]
+	},
+	"CSS+Genshi Text":{ 
+		"shortnames": ["css+genshitext", "css+genshi"],
+		"extensions": [],
+		 "mimetypes": ["text/css+genshi"]
+	},
+	"Fancy":{ 
+		"shortnames": ["fancy", "fy"],
+		"extensions": ["*.fy", "*.fancypack"],
+		 "mimetypes": ["text/x-fancysrc"]
+	},
+	"Ragel":{ 
+		"shortnames": ["ragel"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Scalate Server Page":{ 
+		"shortnames": ["ssp"],
+		"extensions": ["*.ssp"],
+		 "mimetypes": ["application/x-ssp"]
+	},
+	"XML+Evoque":{ 
+		"shortnames": ["xml+evoque"],
+		"extensions": ["*.xml"],
+		 "mimetypes": ["application/xml+evoque"]
+	},
+	"haXe":{ 
+		"shortnames": ["hx", "haXe"],
+		"extensions": ["*.hx"],
+		 "mimetypes": ["text/haxe"]
+	},
+	"Redcode":{ 
+		"shortnames": ["redcode"],
+		"extensions": ["*.cw"],
+		 "mimetypes": []
+	},
+	"Django/Jinja":{ 
+		"shortnames": ["django", "jinja"],
+		"extensions": [],
+		 "mimetypes": ["application/x-django-templating", "application/x-jinja"]
+	},
+	"DTD":{ 
+		"shortnames": ["dtd"],
+		"extensions": ["*.dtd"],
+		 "mimetypes": ["application/xml-dtd"]
+	},
+	"Lighttpd configuration file":{ 
+		"shortnames": ["lighty", "lighttpd"],
+		"extensions": [],
+		 "mimetypes": ["text/x-lighttpd-conf"]
+	},
+	"vhdl":{ 
+		"shortnames": ["vhdl"],
+		"extensions": ["*.vhdl", "*.vhd"],
+		 "mimetypes": ["text/x-vhdl"]
+	},
+	"HTML+Velocity":{ 
+		"shortnames": ["html+velocity"],
+		"extensions": [],
+		 "mimetypes": ["text/html+velocity"]
+	},
+	"JSON":{ 
+		"shortnames": ["json"],
+		"extensions": ["*.json"],
+		 "mimetypes": ["application/json"]
+	},
+	"Ragel in D Host":{ 
+		"shortnames": ["ragel-d"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"Ruby irb session":{ 
+		"shortnames": ["rbcon", "irb"],
+		"extensions": [],
+		 "mimetypes": ["text/x-ruby-shellsession"]
+	},
+	"CSS":{ 
+		"shortnames": ["css"],
+		"extensions": ["*.css"],
+		 "mimetypes": ["text/css"]
+	},
+	"JavaScript+Smarty":{ 
+		"shortnames": ["js+smarty", "javascript+smarty"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+smarty", "text/x-javascript+smarty", "text/javascript+smarty"]
+	},
+	"Asymptote":{ 
+		"shortnames": ["asy", "asymptote"],
+		"extensions": ["*.asy"],
+		 "mimetypes": ["text/x-asymptote"]
+	},
+	"XML+PHP":{ 
+		"shortnames": ["xml+php"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+php"]
+	},
+	"Fortran":{ 
+		"shortnames": ["fortran"],
+		"extensions": ["*.f", "*.f90", "*.F", "*.F90"],
+		 "mimetypes": ["text/x-fortran"]
+	},
+	"Gnuplot":{ 
+		"shortnames": ["gnuplot"],
+		"extensions": ["*.plot", "*.plt"],
+		 "mimetypes": ["text/x-gnuplot"]
+	},
+	"REBOL":{ 
+		"shortnames": ["rebol"],
+		"extensions": ["*.r", "*.r3"],
+		 "mimetypes": ["text/x-rebol"]
+	},
+	"ERB":{ 
+		"shortnames": ["erb"],
+		"extensions": [],
+		 "mimetypes": ["application/x-ruby-templating"]
+	},
+	"Befunge":{ 
+		"shortnames": ["befunge"],
+		"extensions": ["*.befunge"],
+		 "mimetypes": ["application/x-befunge"]
+	},
+	"MoonScript":{ 
+		"shortnames": ["moon", "moonscript"],
+		"extensions": ["*.moon"],
+		 "mimetypes": ["text/x-moonscript", "application/x-moonscript"]
+	},
+	"Dylan":{ 
+		"shortnames": ["dylan"],
+		"extensions": ["*.dylan", "*.dyl"],
+		 "mimetypes": ["text/x-dylan"]
+	},
+	"MoinMoin/Trac Wiki markup":{ 
+		"shortnames": ["trac-wiki", "moin"],
+		"extensions": [],
+		 "mimetypes": ["text/x-trac-wiki"]
+	},
+	"Matlab":{ 
+		"shortnames": ["matlab"],
+		"extensions": ["*.m"],
+		 "mimetypes": ["text/matlab"]
+	},
+	"C":{ 
+		"shortnames": ["c"],
+		"extensions": ["*.c", "*.h", "*.idc"],
+		 "mimetypes": ["text/x-chdr", "text/x-csrc"]
+	},
+	"HTML":{ 
+		"shortnames": ["html"],
+		"extensions": ["*.html", "*.htm", "*.xhtml", "*.xslt"],
+		 "mimetypes": ["text/html", "application/xhtml+xml"]
+	},
+	"Genshi":{ 
+		"shortnames": ["genshi", "kid", "xml+genshi", "xml+kid"],
+		"extensions": ["*.kid"],
+		 "mimetypes": ["application/x-genshi", "application/x-kid"]
+	},
+	"reStructuredText":{ 
+		"shortnames": ["rst", "rest", "restructuredtext"],
+		"extensions": ["*.rst", "*.rest"],
+		 "mimetypes": ["text/x-rst", "text/prs.fallenstein.rst"]
+	},
+	"Velocity":{ 
+		"shortnames": ["velocity"],
+		"extensions": ["*.vm", "*.fhtml"],
+		 "mimetypes": []
+	},
+	"IRC logs":{ 
+		"shortnames": ["irc"],
+		"extensions": ["*.weechatlog"],
+		 "mimetypes": ["text/x-irclog"]
+	},
+	"Prolog":{ 
+		"shortnames": ["prolog"],
+		"extensions": ["*.prolog", "*.pro", "*.pl"],
+		 "mimetypes": ["text/x-prolog"]
+	},
+	"CSS+Django/Jinja":{ 
+		"shortnames": ["css+django", "css+jinja"],
+		"extensions": [],
+		 "mimetypes": ["text/css+django", "text/css+jinja"]
+	},
+	"Smalltalk":{ 
+		"shortnames": ["smalltalk", "squeak"],
+		"extensions": ["*.st"],
+		 "mimetypes": ["text/x-smalltalk"]
+	},
+	"YAML":{ 
+		"shortnames": ["yaml"],
+		"extensions": ["*.yaml", "*.yml"],
+		 "mimetypes": ["text/x-yaml"]
+	},
+	"HTML+Myghty":{ 
+		"shortnames": ["html+myghty"],
+		"extensions": [],
+		 "mimetypes": ["text/html+myghty"]
+	},
+	"Ragel in Java Host":{ 
+		"shortnames": ["ragel-java"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"XSLT":{ 
+		"shortnames": ["xslt"],
+		"extensions": ["*.xsl", "*.xslt"],
+		 "mimetypes": ["application/xsl+xml", "application/xslt+xml"]
+	},
+	"S":{ 
+		"shortnames": ["splus", "s", "r"],
+		"extensions": ["*.S", "*.R"],
+		 "mimetypes": ["text/S-plus", "text/S", "text/R"]
+	},
+	"sqlite3con":{ 
+		"shortnames": ["sqlite3"],
+		"extensions": ["*.sqlite3-console"],
+		 "mimetypes": ["text/x-sqlite3-console"]
+	},
+	"OCaml":{ 
+		"shortnames": ["ocaml"],
+		"extensions": ["*.ml", "*.mli", "*.mll", "*.mly"],
+		 "mimetypes": ["text/x-ocaml"]
+	},
+	"eC":{ 
+		"shortnames": ["ec"],
+		"extensions": ["*.ec", "*.eh"],
+		 "mimetypes": ["text/x-echdr", "text/x-ecsrc"]
+	},
+	"Fantom":{ 
+		"shortnames": ["fan"],
+		"extensions": ["*.fan"],
+		 "mimetypes": ["application/x-fantom"]
+	},
+	"Gettext Catalog":{ 
+		"shortnames": ["pot", "po"],
+		"extensions": ["*.pot", "*.po"],
+		 "mimetypes": ["application/x-gettext", "text/x-gettext", "text/gettext"]
+	},
+	"Ruby":{ 
+		"shortnames": ["rb", "ruby", "duby"],
+		"extensions": ["*.rb", "*.rbw", "Rakefile", "*.rake", "*.gemspec", "*.rbx", "*.duby"],
+		 "mimetypes": ["text/x-ruby", "application/x-ruby"]
+	},
+	"Python 3.0 Traceback":{ 
+		"shortnames": ["py3tb"],
+		"extensions": ["*.py3tb"],
+		 "mimetypes": ["text/x-python3-traceback"]
+	},
+	"POVRay":{ 
+		"shortnames": ["pov"],
+		"extensions": ["*.pov", "*.inc"],
+		 "mimetypes": ["text/x-povray"]
+	},
+	"Ragel in CPP Host":{ 
+		"shortnames": ["ragel-cpp"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"Evoque":{ 
+		"shortnames": ["evoque"],
+		"extensions": ["*.evoque"],
+		 "mimetypes": ["application/x-evoque"]
+	},
+	"Scilab":{ 
+		"shortnames": ["scilab"],
+		"extensions": ["*.sci", "*.sce", "*.tst"],
+		 "mimetypes": ["text/scilab"]
+	},
+	"Java Server Page":{ 
+		"shortnames": ["jsp"],
+		"extensions": ["*.jsp"],
+		 "mimetypes": ["application/x-jsp"]
+	},
+	"ABAP":{ 
+		"shortnames": ["abap"],
+		"extensions": ["*.abap"],
+		 "mimetypes": ["text/x-abap"]
+	},
+	"HTML+Mako":{ 
+		"shortnames": ["html+mako"],
+		"extensions": [],
+		 "mimetypes": ["text/html+mako"]
+	},
+	"CFEngine3":{ 
+		"shortnames": ["cfengine3", "cf3"],
+		"extensions": ["*.cf"],
+		 "mimetypes": []
+	},
+	"Matlab session":{ 
+		"shortnames": ["matlabsession"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Mason":{ 
+		"shortnames": ["mason"],
+		"extensions": ["*.m", "*.mhtml", "*.mc", "*.mi", "autohandler", "dhandler"],
+		 "mimetypes": ["application/x-mason"]
+	},
+	"HTML+PHP":{ 
+		"shortnames": ["html+php"],
+		"extensions": ["*.phtml"],
+		 "mimetypes": ["application/x-php", "application/x-httpd-php", "application/x-httpd-php3", "application/x-httpd-php4", "application/x-httpd-php5"]
+	},
+	"Kotlin":{ 
+		"shortnames": ["kotlin"],
+		"extensions": ["*.kt"],
+		 "mimetypes": ["text/x-kotlin"]
+	},
+	"PostScript":{ 
+		"shortnames": ["postscript"],
+		"extensions": ["*.ps", "*.eps"],
+		 "mimetypes": ["application/postscript"]
+	},
+	"verilog":{ 
+		"shortnames": ["v"],
+		"extensions": ["*.v"],
+		 "mimetypes": ["text/x-verilog"]
+	},
+	"ANTLR With Java Target":{ 
+		"shortnames": ["antlr-java"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"Tcl":{ 
+		"shortnames": ["tcl"],
+		"extensions": ["*.tcl"],
+		 "mimetypes": ["text/x-tcl", "text/x-script.tcl", "application/x-tcl"]
+	},
+	"JavaScript+Ruby":{ 
+		"shortnames": ["js+erb", "javascript+erb", "js+ruby", "javascript+ruby"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+ruby", "text/x-javascript+ruby", "text/javascript+ruby"]
+	},
+	"Base Makefile":{ 
+		"shortnames": ["basemake"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"ANTLR With Python Target":{ 
+		"shortnames": ["antlr-python"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"cpp-objdump":{ 
+		"shortnames": ["cpp-objdump", "c++-objdumb", "cxx-objdump"],
+		"extensions": ["*.cpp-objdump", "*.c++-objdump", "*.cxx-objdump"],
+		 "mimetypes": ["text/x-cpp-objdump"]
+	},
+	"Ioke":{ 
+		"shortnames": ["ioke", "ik"],
+		"extensions": ["*.ik"],
+		 "mimetypes": ["text/x-iokesrc"]
+	},
+	"PyPy Log":{ 
+		"shortnames": ["pypylog", "pypy"],
+		"extensions": ["*.pypylog"],
+		 "mimetypes": ["application/x-pypylog"]
+	},
+	"Python 3":{ 
+		"shortnames": ["python3", "py3"],
+		"extensions": [],
+		 "mimetypes": ["text/x-python3", "application/x-python3"]
+	},
+	"Batchfile":{ 
+		"shortnames": ["bat"],
+		"extensions": ["*.bat", "*.cmd"],
+		 "mimetypes": ["application/x-dos-batch"]
+	},
+	"Snobol":{ 
+		"shortnames": ["snobol"],
+		"extensions": ["*.snobol"],
+		 "mimetypes": ["text/x-snobol"]
+	},
+	"ANTLR":{ 
+		"shortnames": ["antlr"],
+		"extensions": [],
+		 "mimetypes": []
+	},
+	"Opa":{ 
+		"shortnames": ["opa"],
+		"extensions": ["*.opa"],
+		 "mimetypes": ["text/x-opa"]
+	},
+	"PostgreSQL console (psql)":{ 
+		"shortnames": ["psql", "postgresql-console", "postgres-console"],
+		"extensions": [],
+		 "mimetypes": ["text/x-postgresql-psql"]
+	},
+	"JavaScript+Django/Jinja":{ 
+		"shortnames": ["js+django", "javascript+django", "js+jinja", "javascript+jinja"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+django", "application/x-javascript+jinja", "text/x-javascript+django", "text/x-javascript+jinja", "text/javascript+django", "text/javascript+jinja"]
+	},
+	"Diff":{ 
+		"shortnames": ["diff", "udiff"],
+		"extensions": ["*.diff", "*.patch"],
+		 "mimetypes": ["text/x-diff", "text/x-patch"]
+	},
+	"Cython":{ 
+		"shortnames": ["cython", "pyx"],
+		"extensions": ["*.pyx", "*.pxd", "*.pxi"],
+		 "mimetypes": ["text/x-cython", "application/x-cython"]
+	},
+	"Erlang":{ 
+		"shortnames": ["erlang"],
+		"extensions": ["*.erl", "*.hrl", "*.es", "*.escript"],
+		 "mimetypes": ["text/x-erlang"]
+	},
+	"Erlang erl session":{ 
+		"shortnames": ["erl"],
+		"extensions": ["*.erl-sh"],
+		 "mimetypes": ["text/x-erl-shellsession"]
+	},
+	"Clojure":{ 
+		"shortnames": ["clojure", "clj"],
+		"extensions": ["*.clj"],
+		 "mimetypes": ["text/x-clojure", "application/x-clojure"]
+	},
+	"Modelica":{ 
+		"shortnames": ["modelica"],
+		"extensions": ["*.mo"],
+		 "mimetypes": ["text/x-modelica"]
+	},
+	"ANTLR With Perl Target":{ 
+		"shortnames": ["antlr-perl"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"Myghty":{ 
+		"shortnames": ["myghty"],
+		"extensions": ["*.myt", "autodelegate"],
+		 "mimetypes": ["application/x-myghty"]
+	},
+	"Duel":{ 
+		"shortnames": ["duel", "Duel Engine", "Duel View", "JBST", "jbst", "JsonML+BST"],
+		"extensions": ["*.duel", "*.jbst"],
+		 "mimetypes": ["text/x-duel", "text/x-jbst"]
+	},
+	"FSharp":{ 
+		"shortnames": ["fsharp"],
+		"extensions": ["*.fs", "*.fsi"],
+		 "mimetypes": ["text/x-fsharp"]
+	},
+	"NewLisp":{ 
+		"shortnames": ["newlisp"],
+		"extensions": ["*.lsp", "*.nl"],
+		 "mimetypes": ["text/x-newlisp", "application/x-newlisp"]
+	},
+	"MOOCode":{ 
+		"shortnames": ["moocode"],
+		"extensions": ["*.moo"],
+		 "mimetypes": ["text/x-moocode"]
+	},
+	"Newspeak":{ 
+		"shortnames": ["newspeak"],
+		"extensions": ["*.ns2"],
+		 "mimetypes": ["text/x-newspeak"]
+	},
+	"Bash Session":{ 
+		"shortnames": ["console"],
+		"extensions": ["*.sh-session"],
+		 "mimetypes": ["application/x-shell-session"]
+	},
+	"Raw token data":{ 
+		"shortnames": ["raw"],
+		"extensions": [],
+		 "mimetypes": ["application/x-pygments-tokens"]
+	},
+	"C#":{ 
+		"shortnames": ["csharp", "c#"],
+		"extensions": ["*.cs"],
+		 "mimetypes": ["text/x-csharp"]
+	},
+	"Gosu Template":{ 
+		"shortnames": ["gst"],
+		"extensions": ["*.gst"],
+		 "mimetypes": ["text/x-gosu-template"]
+	},
+	"TeX":{ 
+		"shortnames": ["tex", "latex"],
+		"extensions": ["*.tex", "*.aux", "*.toc"],
+		 "mimetypes": ["text/x-tex", "text/x-latex"]
+	},
+	"Cheetah":{ 
+		"shortnames": ["cheetah", "spitfire"],
+		"extensions": ["*.tmpl", "*.spt"],
+		 "mimetypes": ["application/x-cheetah", "application/x-spitfire"]
+	},
+	"Elixir":{ 
+		"shortnames": ["elixir", "ex", "exs"],
+		"extensions": ["*.ex", "*.exs"],
+		 "mimetypes": ["text/x-elixir"]
+	},
+	"GoodData-CL":{ 
+		"shortnames": ["gooddata-cl"],
+		"extensions": ["*.gdc"],
+		 "mimetypes": ["text/x-gooddata-cl"]
+	},
+	"Objective-C":{ 
+		"shortnames": ["objective-c", "objectivec", "obj-c", "objc"],
+		"extensions": ["*.m"],
+		 "mimetypes": ["text/x-objective-c"]
+	},
+	"JavaScript":{ 
+		"shortnames": ["js", "javascript"],
+		"extensions": ["*.js"],
+		 "mimetypes": ["application/javascript", "application/x-javascript", "text/x-javascript", "text/javascript"]
+	},
+	"Common Lisp":{ 
+		"shortnames": ["common-lisp", "cl"],
+		"extensions": ["*.cl", "*.lisp", "*.el"],
+		 "mimetypes": ["text/x-common-lisp"]
+	},
+	"Embedded Ragel":{ 
+		"shortnames": ["ragel-em"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"ActionScript 3":{ 
+		"shortnames": ["as3", "actionscript3"],
+		"extensions": ["*.as"],
+		 "mimetypes": ["application/x-actionscript", "text/x-actionscript", "text/actionscript"]
+	},
+	"ANTLR With CPP Target":{ 
+		"shortnames": ["antlr-cpp"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"Gosu":{ 
+		"shortnames": ["gosu"],
+		"extensions": ["*.gs", "*.gsx", "*.gsp", "*.vark"],
+		 "mimetypes": ["text/x-gosu"]
+	},
+	"Hybris":{ 
+		"shortnames": ["hybris", "hy"],
+		"extensions": ["*.hy", "*.hyb"],
+		 "mimetypes": ["text/x-hybris", "application/x-hybris"]
+	},
+	"JavaScript+PHP":{ 
+		"shortnames": ["js+php", "javascript+php"],
+		"extensions": [],
+		 "mimetypes": ["application/x-javascript+php", "text/x-javascript+php", "text/javascript+php"]
+	},
+	"Factor":{ 
+		"shortnames": ["factor"],
+		"extensions": ["*.factor"],
+		 "mimetypes": ["text/x-factor"]
+	},
+	"XQuery":{ 
+		"shortnames": ["xquery", "xqy"],
+		"extensions": ["*.xqy", "*.xquery"],
+		 "mimetypes": ["text/xquery", "application/xquery"]
+	},
+	"ECL":{ 
+		"shortnames": ["ecl"],
+		"extensions": ["*.ecl"],
+		 "mimetypes": ["application/x-ecl"]
+	},
+	"Ragel in Objective C Host":{ 
+		"shortnames": ["ragel-objc"],
+		"extensions": ["*.rl"],
+		 "mimetypes": []
+	},
+	"XML+Django/Jinja":{ 
+		"shortnames": ["xml+django", "xml+jinja"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+django", "application/xml+jinja"]
+	},
+	"Awk":{ 
+		"shortnames": ["awk", "gawk", "mawk", "nawk"],
+		"extensions": ["*.awk"],
+		 "mimetypes": ["application/x-awk"]
+	},
+	"systemverilog":{ 
+		"shortnames": ["sv"],
+		"extensions": ["*.sv", "*.svh"],
+		 "mimetypes": ["text/x-systemverilog"]
+	},
+	"Standard ML":{ 
+		"shortnames": ["sml"],
+		"extensions": ["*.sml", "*.sig", "*.fun"],
+		 "mimetypes": ["text/x-standardml", "application/x-standardml"]
+	},
+	"ANTLR With Ruby Target":{ 
+		"shortnames": ["antlr-ruby", "antlr-rb"],
+		"extensions": ["*.G", "*.g"],
+		 "mimetypes": []
+	},
+	"XML+Myghty":{ 
+		"shortnames": ["xml+myghty"],
+		"extensions": [],
+		 "mimetypes": ["application/xml+myghty"]
+	}
+}
