@@ -37,22 +37,39 @@ actions = {
 }
 
 def process_request(json_data):
-    log.debug('Processing: %s' % json.dumps(json_data))
+    log.debug('Processing: path: %s\n%s:%s' % (json_data['fullPath'], json_data['action'], json_data['language']))
 
-    lexer = get_lexer_by_name(json_data['language'])
+    try:
+      code = json_data['code']
 
-    fmter = get_formatter_by_name(json_data['outformat'])
-    fmter.encoding = json_data['encoding'] 
+      fmter = get_formatter_by_name(json_data['outformat'])
+      fmter.encoding = json_data['encoding'] 
 
-    code = json_data['code']
+      lexer = get_lexer_by_name(json_data['language'])
 
-    return highlight(code, lexer, fmter)
+      return highlight(code, lexer, fmter)
+    except ValueError as err:
+      log.error(err)
+      return ''' 
+        <h1><a href="http://pygments.org">Pygments</a> failed to highlight this file</h1>
+        <div>You should consider filing a bug report or provide a bug fix to help the community ;)</div>
+        <div>
+          The Error was:
+            <pre>%s</pre>
+        </div>
+        <div>
+          The code that was parsed is:
+            <pre>%s</pre>
+        </div>
+        ''' % (err, code)
+          
+      
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 s.bind((HOST, PORT))
 
-s.listen(50)
+s.listen(5)
 
 log.info('Pygments Server listening on %s:%s' % (HOST, PORT))
 
@@ -68,12 +85,11 @@ while 1:
     while 1:
         data = conn.recv(1024)
         if not data: break
-        eom_ind = data.rfind(EOM)
-        if  eom_ind < 0:
-            buf += data
-            log.debug('Got: %s' % data)
-        else:
-            buf += data[:eom_ind]
+        buf += data
+        eom_ind = buf.rfind(EOM)
+        if  eom_ind >= 0:
+
+            buf = buf[:eom_ind]
             json_data = json.loads(buf)
             buf = ''
 

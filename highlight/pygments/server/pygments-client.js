@@ -18,14 +18,12 @@ highlightQueue = queue.up(function highlight(req, highlightedCb) {
   client
     .connect(port, host)
     .on('connect', function () {
-      log.silly('pygments client connected');
       client.write(reqString + EOM);
     })
     .on('data', function (data) {
       buf += data;
     })
     .on('end', function () {
-      log.silly('pygments client disconnected');
       highlightedCb(null, buf);
       self.done();
     })
@@ -36,9 +34,9 @@ highlightQueue = queue.up(function highlight(req, highlightedCb) {
     });
 });
 
-highlightQueue.concurrency = 5;
+highlightQueue.concurrency = 2;
 
-module.exports.request = highlightQueue.enqueue;
+module.exports.highlight = highlightQueue.enqueue;
 
 /* Example:
 var req1 = {
