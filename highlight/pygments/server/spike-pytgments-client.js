@@ -7,21 +7,23 @@ var opts = {
 
 
 var json = JSON.stringify(opts);
-console.log(json);
-
 var client = new net.Socket();
+var EOM = '_^EOM^_';
 
+var buf = '';
 client
   .connect(opts.port, opts.host)
   .on('connect', function () {
     console.log('client connected');
-    var buff = new Buffer(json, 'utf-8');
-    client.write(buff);
+
+    client.write(json);
+    client.write(EOM);
   })
   .on('data', function (data) {
-    console.log(data.toString());
-    client.destroy();
+    buf += data;
   })
   .on('end', function () {
+    console.log(buf);
     console.log('client disconnected');
   });
+
