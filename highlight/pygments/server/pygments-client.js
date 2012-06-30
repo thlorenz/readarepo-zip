@@ -7,9 +7,6 @@ var net    =  require('net')
   , highlightQueue
   ;
 
-
-log.level = 'silly';
-
 highlightQueue = queue.up(function highlight(req, highlightedCb) {
 
   var reqString =  JSON.stringify(req)
@@ -41,19 +38,19 @@ highlightQueue = queue.up(function highlight(req, highlightedCb) {
 
 highlightQueue.concurrency = 5;
 
+module.exports.request = highlightQueue.enqueue;
+
+/* Example:
 var req1 = {
-    language: 'javascript'
-  , code: 'var a = 3;'
+    action    :  'highlight'
+  , language  :  'javascript'
+  , outformat :  'html'
+  , encoding  :  'utf-8'
+  , code      :  'var a = 3;'
 };
 
-var req2 = {
-    language: 'javascript'
-  , code: 'function () { return  5; }'
-};
-
-highlightQueue.enqueue(req1, function (err, result) {
-  log.verbose('Highlighted: ', result);
-});
-highlightQueue.enqueue(req2, function (err, result) {
-  log.verbose('Highlighted: ', result);
-});
+for (var i = 0; i < 2000; i++)
+  highlightQueue.enqueue(req1, function (err, result) {
+    log.verbose('Highlighted: ', result);
+  });
+*/

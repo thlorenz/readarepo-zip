@@ -1,6 +1,27 @@
+import sys
+import os
+
+script_path = os.path.dirname( os.path.realpath( __file__ ) )
+pygments_path = os.path.join(script_path, '../../../3rd/pygments')
+sys.path.append(pygments_path)
+
 import socket
 import json
 import struct
+
+
+from pygments import __version__, highlight
+from pygments.lexers import get_all_lexers, get_lexer_by_name, get_lexer_for_filename, \
+     find_lexer_class, guess_lexer, TextLexer
+
+from pygments.formatters import get_all_formatters, get_formatter_by_name, \
+     get_formatter_for_filename, find_formatter_class, \
+     TerminalFormatter
+"""
+from pygments.util import ClassNotFound, OptionError, docstring_headline
+from pygments.filters import get_all_filters, find_filter_class
+from pygments.styles import get_all_styles, get_style_by_name
+"""
 
 from logger import get_logger
 
@@ -10,12 +31,22 @@ HOST = 'localhost'
 PORT = 9999
 EOM = '_^EOM^_'
 
+actions = { 
+    'highlight' :  'highlight',
+    'tokenize'  :  'tokenize'
+}
+
 def process_request(json_data):
     log.debug('Processing: %s' % json.dumps(json_data))
 
-    # TODO: call into pygments to convert code
-    return 'Highlighted Code'
-    
+    lexer = get_lexer_by_name(json_data['language'])
+
+    fmter = get_formatter_by_name(json_data['outformat'])
+    fmter.encoding = json_data['encoding'] 
+
+    code = json_data['code']
+
+    return highlight(code, lexer, fmter)
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
