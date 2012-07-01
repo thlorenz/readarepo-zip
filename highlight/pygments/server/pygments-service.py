@@ -84,21 +84,27 @@ while 1:
 
     buf = ''
 
-    # Listen for data until EOM, then convert, send result and close connection
-    while 1:
-        data = conn.recv(1024)
-        if not data: break
-        buf += data
-        eom_ind = buf.rfind(EOM)
-        if  eom_ind >= 0 and (eom_ind + len(EOM) == len(buf)):
+    try:
+        # Listen for data until EOM, then convert, send result and close connection
+        while 1:
+            data = conn.recv(1024)
+            if not data: break
+            buf += data
+            eom_ind = buf.rfind(EOM)
+            # Ensure EOM was at end of string (still has tiny chance to fail if EOM inside code happens to be at end of buffer)
+            if  eom_ind >= 0 and (eom_ind + len(EOM) == len(buf)):
 
-            buf = buf[:eom_ind]
-            json_data = json.loads(buf)
-            buf = ''
+                buf = buf[:eom_ind]
+                json_data = json.loads(buf)
+                buf = ''
 
-            result = process_request(json_data)
-            conn.send(result)
+                result = process_request(json_data)
+                conn.send(result)
 
-            break
+                break
+    except Exception as err:
+        # Make sure an error during a request doesn't crash entire service
+        print >> sys.stderr, err.__str__()
+        # conn.send('Sorry, readarepo was unable to convert this file: ' + err)
 
     conn.close()
