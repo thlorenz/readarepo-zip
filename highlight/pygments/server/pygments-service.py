@@ -64,12 +64,15 @@ def process_request(json_data):
         ''' % (err, code)
           
       
+try: 
+  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  s.bind((HOST, PORT))
 
-s.bind((HOST, PORT))
-
-s.listen(5)
+  s.listen(5)
+except Exception as err:
+  print >> sys.stderr, err.__str__()
+  exit(1)
 
 log.info('Pygments Server listening on %s:%s' % (HOST, PORT))
 
