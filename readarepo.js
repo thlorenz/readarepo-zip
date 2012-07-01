@@ -27,6 +27,7 @@ function startConversion() {
     } else {
       log.info ('Everyting is OK.'); 
     }
+
     if (usingPygments) {
       service.stopPygmentsService();
     }

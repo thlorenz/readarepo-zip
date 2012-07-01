@@ -23,6 +23,7 @@ function startService (cb) {
 
   service.stdout.once('data', function (data) {
     cb(null, 'pygments started up OK');
+    log.verbose(data);   
   });
   service.stdout.on('data', function (data) {
     log.silly(data);   
