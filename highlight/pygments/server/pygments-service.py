@@ -90,7 +90,7 @@ while 1:
         if not data: break
         buf += data
         eom_ind = buf.rfind(EOM)
-        if  eom_ind >= 0:
+        if  eom_ind >= 0 and (eom_ind + len(EOM) == len(buf)):
 
             buf = buf[:eom_ind]
             json_data = json.loads(buf)
