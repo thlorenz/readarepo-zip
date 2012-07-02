@@ -22,6 +22,7 @@ service.configure( { loglevel:  argv.loglevel } );
 
 function startConversion() {
   service.cloneAndConvert(argv, function(err) { 
+
     if (err) {
       log.error(err);
     } else {
@@ -31,6 +32,7 @@ function startConversion() {
     if (usingPygments) {
       service.stopPygmentsService();
     }
+
   });
 }
 

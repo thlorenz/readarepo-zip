@@ -2,7 +2,7 @@
   "author"      :  "Thorsten Lorenz <thlorenz@gmx.de> (thorstenlorenz.wordpress.com)",
   "name"        :  "readarepo",
   "description" :  "Convert a git repo to zipped up html to read anywhere.",
-  "version"     :  "0.0.1",
+  "version"     :  "0.0.2",
   "homepage"    :  "https://github.com/thlorenz/readarepo",
   "repository"  :  {
     "type" :  "git",
@@ -38,7 +38,6 @@
   "devDependencies": {
       "mocha"  :  "1.1.x"
     , "should" :  "0.6.x"
-    , "cdir"   :  "0.1.x"
   },
   "optionalDependencies": {},
   "engines": {
