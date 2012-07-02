@@ -78,9 +78,12 @@ As an example, in order to convert folder './foo' (excluding '.svn' folders) and
 
 ## API
 
-In order to support using **readarepo** as a service, it exposes all necessary functions via the [service module](./lib/service.js).
+In order to support using **readarepo** as a service, it exposes all necessary
+functions via the [service module](./readarepo/blob/master/lib/service.js).
 
-As a guide on how to use it look inside [readarepo.js](./readarepo.js) and [readafolder.js](./readafolder.js).
+As a guide on how to use it look inside
+[readarepo.js](./readarepo/blob/master/readarepo.js) and
+[readafolder.js](./readarepo/blob/master/readafolder.js).
 
 Most functions take a function as last parameter which will be invoked once the task is complete.
 
