@@ -1,3 +1,8 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Pygmentize](#pygmentize)
+	- [Nicely working opts](#nicely-working-opts)
+
 # Pygmentize
 
 ## Nicely working opts

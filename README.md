@@ -1,3 +1,14 @@
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [readarepo](#readarepo)
+	- [What ](#what)
+	- [How](#how)
+	- [Install](#install)
+	- [Run](#run)
+		- [Convert a repository](#convert-a-repository)
+		- [Convert a folder](#convert-a-folder)
+	- [API](#api)
+
 # readarepo
 
 ## What 
