@@ -1,21 +1,18 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [readarepo](#readarepo)
-	- [What ](#what)
-	- [How](#how)
-	- [Install](#install)
-	- [Run](#run)
-		- [Convert a repository](#convert-a-repository)
-		- [Convert a folder](#convert-a-folder)
-	- [API](#api)
+- [What ](#what)
+- [How](#how)
+- [Install](#install)
+- [Run](#run)
+	- [Convert a repository](#convert-a-repository)
+	- [Convert a folder](#convert-a-folder)
+- [API](#api)
 
-# readarepo
-
-## What 
+# What 
 
 Convert a git repo into html pages to read anywhere.
 
-## How
+# How
 
 Given a repository url or a local folder, it will convert all files into syntax
 highlighted `.html` files, while maintaining the original folder structure.
@@ -25,15 +22,15 @@ read on a reader like iPad, e.g., with
 [GoodReader](http://itunes.apple.com/app/id363448914?mt=8)
 
 
-## Install
+# Install
 
 Requires python to be [installed](http://www.python.org/getit/).
     
     npm install readarepo
 
-## Run
+# Run
     
-### Convert a repository
+## Convert a repository
 
 Convert a github repository use `readarepo.js`.
 
@@ -63,7 +60,7 @@ library.
 repository](https://github.com/thlorenz/fsrec) since readarepo uses it under
 the hood.
 
-### Convert a folder
+## Convert a folder
 
 In order to convert all files found within a folder on your machine, use `readafolder.js`.
 
@@ -87,7 +84,7 @@ As an example, in order to convert folder './foo' (excluding '.svn' folders) and
 
 - filters work the same as explained above
 
-## API
+# API
 
 In order to support using **readarepo** as a service, it exposes all necessary
 functions via the [service module](./readarepo/blob/master/lib/service.js).
