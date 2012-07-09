@@ -28,10 +28,6 @@ describe('highlighting unnamed `codeblock` on one line', function () {
   it('calls highlighter with codeblock', function () {
     opts.blocks[0].should.equal(onelineBlock);
   })
-
-  it('code block is replaced with highlight result', function () {
-     res.should.equal('# Header\nSome Explanation\n' + highlightedCode + '\nMore Content')
-  })
 });
 
 describe('highlighting unnamed ````codeblock```` on one line', function () {
@@ -63,17 +59,4 @@ describe('highlighting two unnamed `codeblock`s each on one line', function () {
     opts.blocks[1].should.equal(otherOnelineBlock);
   })
   
-});
-
-describe('highlighting unnamed `codeblock` on multiple lines', function () {
-
-  var content = '# Header\nSome Explanation\n`' + multilineBlock + '`\nMore Content'
-    , opts = getOpts()
-    ;
-
-  md.convertMarkdown(content, opts);
-
-  it('calls highlighter with codeblock', function () {
-    opts.blocks[0].should.equal(multilineBlock);
-  })
 });
