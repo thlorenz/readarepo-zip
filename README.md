@@ -84,6 +84,14 @@ As an example, in order to convert folder './foo' (excluding '.svn' folders) and
 
 - filters work the same as explained above
 
+## Available highlighters
+
+You can currently choose from three highlighters:
+
+- [pytments](http://pygments.org/) by specifying `-h pygments` (requires python to be installed)
+- [highlightjs](http://softwaremaniacs.org/soft/highlight/en/) by specifying `-h hljs` (doesn't support line numbers)
+- [SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter/) by specifying `-h sh`
+
 # API
 
 In order to support using **readarepo-zip** as a service, it exposes all necessary
