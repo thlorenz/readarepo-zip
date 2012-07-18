@@ -42,7 +42,7 @@ def process_request(json_data):
     try:
       code = json_data['code']
 
-      fmter = get_formatter_by_name(json_data['outformat'])
+      fmter = get_formatter_by_name(json_data['outformat'], linenos = json_data['linenos'], lineanchors = json_data['lineanchors'])
       fmter.encoding = json_data['encoding'] 
 
       lexer = get_lexer_by_name(json_data['language'])
