@@ -1,7 +1,6 @@
 var child_process =  require('child_process')
   , spawn         =  child_process.spawn
   , path          =  require('path')
-  , fsrec         =  require('fsrec')
   , pygments      =  require('../lib/pygments')
   , paths         =  require('../lib/common').paths
   , pygmentize    =  path.join(paths.pygments, 'pygmentize')

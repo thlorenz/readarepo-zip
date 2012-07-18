@@ -26,7 +26,6 @@
   ],
   "main": "readarepo-zip.js",
   "dependencies": {
-    "fsrec": "0.0.x",
     "mkdirp": "0.3.x",
     "step": "0.0.x",
     "handlebars": "1.0.x",
@@ -37,7 +36,8 @@
     "npmlog": "0.0.x",
     "minimal-queue": "0.0.x",
     "SyntaxHighlighter": "git://github.com/alexgorbatchev/SyntaxHighlighter.git",
-    "node-syntaxhighlighter": "~0.7.2"
+    "node-syntaxhighlighter": "~0.7.2",
+    "readdirp": "~0.1.1"
   },
   "devDependencies": {
     "mocha": "1.1.x",
