@@ -35,8 +35,7 @@
     "highlight.js": "7.0.x",
     "npmlog": "0.0.x",
     "minimal-queue": "0.0.x",
-    "SyntaxHighlighter": "git://github.com/alexgorbatchev/SyntaxHighlighter.git",
-    "node-syntaxhighlighter": "~0.7.2",
+    "node-syntaxhighlighter": "~0.8.0",
     "readdirp": "~0.1.1"
   },
   "devDependencies": {
