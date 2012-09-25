@@ -1,5 +1,5 @@
 {
-  "author": "Thorsten Lorenz <thlorenz@gmx.de> (thorstenlorenz.wordpress.com)",
+  "author": "Thorsten Lorenz <thlorenz@gmx.de> (thlorenz.com)",
   "name": "readarepo-zip",
   "description": "Convert a git repo to zipped up html to read anywhere.",
   "version": "0.1.1",
